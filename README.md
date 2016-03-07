@@ -5,7 +5,7 @@ used [http://www.benjack.io/2016/01/02/el-capitan-biocomputing.html](http://www.
     pip install --upgrade pip
     pip install scipy
     pip install jupyter
-		brew tap homebrew/science
-		brew install R
-		brew tap caskroom/cask
-		brew cask install rstudio```
+    brew tap homebrew/science
+    brew install R
+    brew tap caskroom/cask
+    brew cask install rstudio```
