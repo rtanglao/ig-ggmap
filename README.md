@@ -15,6 +15,7 @@ used [http://www.benjack.io/2016/01/02/el-capitan-biocomputing.html](http://www.
 1. ```data3 = read.csv(file="~rtanglao/Dropbox/GIT/rtgram/first2000-ig-van-2015.csv", stringsAsFactors=F)```
 1. ```map <- qmap('Vancouver,BC', zoom = 12, maptype = 'hybrid’)```
 1. ```map + geom_point(data = data3, aes(x = long, y=lat, color=I(data3$color)), size=1)```
+
 ## Unsuccessful attempts
 
 1. ```map <- qmap('Vancouver,BC', zoom = 12, maptype = ‘hybrid’)```
