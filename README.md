@@ -22,7 +22,8 @@ used [http://www.benjack.io/2016/01/02/el-capitan-biocomputing.html](http://www.
 2. ```data2 = read.csv(file="~rtanglao/Dropbox/GIT/rtgram/first20-ig-van-2015.csv", stringsAsFactors=F)```
 3. ```map + geom_point(data = data2, aes(x = long, y=lat, color=color), size=1)``` yields:
     * result is here: [https://www.flickr.com/photos/roland/25598368011/](https://www.flickr.com/photos/roland/25598368011/) bugs: markers are the wrong color! need to get rid of map chrome
-4.seems to work: ```qmplot(long, lat, data = data2, maptype = "toner-lite",  color = I(data2$color))```   
+
+1. seems to work: ```qmplot(long, lat, data = data2, maptype = "toner-lite",  color = I(data2$color))```   
  
 #  11 March 2016 - make “chrome-less” map:
 
