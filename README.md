@@ -15,4 +15,4 @@ used [http://www.benjack.io/2016/01/02/el-capitan-biocomputing.html](http://www.
 1. ```map <- qmap('Vancouver,BC', zoom = 12, maptype = ‘hybrid’)```
 2. ```data2 = read.csv(file="~rtanglao/Dropbox/GIT/rtgram/first20-ig-van-2015.csv", stringsAsFactors=F)```
 3. ```map + geom_point(data = data2, aes(x = long, y=lat, color=color), size=1)``` yields:
-* 
+* result is here: [https://www.flickr.com/photos/roland/25598368011/](https://www.flickr.com/photos/roland/25598368011/)
