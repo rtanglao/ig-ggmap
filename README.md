@@ -46,4 +46,5 @@ make chromeless map following this:
  color=I(data3$color), xlim=c(-123.17, -123.06),
  ylim=c(49.19, 49.324)))
  ```
-
+3. map:
+![](https://raw.githubusercontent.com/rtanglao/ig-ggmap/master/first2000-instagram-vancouver-2015-top-colour.png | width=300)
