@@ -37,7 +37,7 @@ make chromeless map following this:
 ```R
 data3 = read.csv(file="~rtanglao/Dropbox/GIT/rtgram/first2000-ig-van-2015.csv", stringsAsFactors=F)
 ```
-1. plot the data with limits, note the I() function for colours:
+2. plot the data with limits, note the I() function for colours:
 ```R
 (p <- qplot(long, lat, geom = "point", data = data3,
 color=I(data3$color), xlim=c(-123.17, -123.06),
