@@ -33,7 +33,6 @@ make chromeless map following this:
 * [http://www.milanor.net/blog/maps-in-r-plotting-data-points-on-a-map/](http://www.milanor.net/blog/maps-in-r-plotting-data-points-on-a-map/)
 
 # 12 March 2016 - chromeless maps!
-
 1. read the data:
 ```R
 data3 = read.csv(file="~rtanglao/Dropbox/GIT/rtgram/first2000-ig-van-2015.csv", stringsAsFactors=F)
