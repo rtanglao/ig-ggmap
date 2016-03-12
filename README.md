@@ -48,4 +48,4 @@ make chromeless map following this:
  ```
 3. map:
 
-![ig-vancouver-top-colour-first-2000](https://raw.githubusercontent.com/rtanglao/ig-ggmap/master/first2000-instagram-vancouver-2015-top-colour.png | width=300)
+![ig-vancouver-top-colour-first-2000](https://raw.githubusercontent.com/rtanglao/ig-ggmap/master/first2000-instagram-vancouver-2015-top-colour.png)
