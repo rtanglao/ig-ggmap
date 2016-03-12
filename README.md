@@ -34,6 +34,8 @@ make chromeless map following this:
 
 # 12 March 2016 - chromeless maps!
 
-1. ```data3 = read.csv(file="~rtanglao/Dropbox/GIT/rtgram/first2000-ig-van-2015.csv", stringsAsFactors=F)```
-2. ```(p <- qplot(long, lat, geom = "point", data = data3, color=I(data3$color), xlim=c(-123.17, -123.06), ylim=c(49.19, 49.324)))```
+1. ```r
+data3 = read.csv(file="~rtanglao/Dropbox/GIT/rtgram/first2000-ig-van-2015.csv", stringsAsFactors=F)```
+1. ```r
+(p <- qplot(long, lat, geom = "point", data = data3, color=I(data3$color), xlim=c(-123.17, -123.06), ylim=c(49.19, 49.324)))```
 
