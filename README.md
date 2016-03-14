@@ -55,7 +55,7 @@ make chromeless map following this:
 1. generate facets aka small multiples
  
  ```R
-data6 = read.csv(file="~rtanglao/Dropbox/GIT/rtgram/13March2016-abbreviated-instagram-vancouver-top-colour-lat-long-date-2015.csv", 
-+     stringsAsFactors=F)
+data6 = read.csv(file=
+"~rtanglao/Dropbox/GIT/rtgram/13March2016-abbreviated-instagram-vancouver-top-colour-lat-long-date-2015.csv",stringsAsFactors=F)
 (p <- qplot(long, lat, geom = "point", data = data6, color=I(data6$color), xlim=c(-123.27, -123.005), ylim=c(49.21, 49.324), size=I(1.0), alpha=I(0.4))+ facet_wrap(~date) + theme_minimal())
 ```
