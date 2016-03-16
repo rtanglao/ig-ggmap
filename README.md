@@ -62,3 +62,22 @@ color=I(data6$color), xlim=c(-123.27, -123.005),
 ylim=c(49.21, 49.324), size=I(1.0), alpha=I(0.4))+
 facet_wrap(~date) + theme_minimal())
 ```
+
+# 14 March 2016 - small multiples
+
+1. get dataset
+
+    ```bash
+    ./writeHexTopColourLatLonByDate.rb > 13March2016-instagram-vancouver-top-colour-lat-long-date-2015.csv
+    ```
+1. generate facets aka small multiples
+ 
+ ```R
+f="~rtanglao/Dropbox/GIT/rtgram/13March2016-instagram-vancouver-top-colour-lat-long-date-2015.csv"
+data6 = read.csv(file=f,stringsAsFactors=F)
+(p <- qplot(long, lat, geom = "point", data = data6,
+color=I(data6$color), xlim=c(-123.27, -123.005),
+ylim=c(49.21, 49.324), size=I(1.0), alpha=I(0.4))+
+facet_wrap(~date) + theme_minimal())
+```
+
