@@ -80,4 +80,6 @@ color=I(data6$color), xlim=c(-123.27, -123.005),
 ylim=c(49.21, 49.324), size=I(1.0), alpha=I(0.4))+
 facet_wrap(~date) + theme_minimal())
 ```
+# 16 March 2016
 
+1. next up write an R script to generate a map from command line parameters for the date and then create a PNG of that file
