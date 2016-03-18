@@ -12,7 +12,7 @@ if("--help" %in% args) {
       what to grep for also what to name the file
       --help              - print this text 
       Example:
-      ./test.R 001_ThuJan1\n\n")
+      Rscript plot1-day-ig-van-2015-pointsize1.0.alph0.4.R 001_ThuJan1\n\n")
  
   q(save="no")
 }
