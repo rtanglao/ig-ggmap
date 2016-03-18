@@ -12,13 +12,13 @@ if("--help" %in% args) {
       what to grep for also what to name the file
       --help              - print this text 
       Example:
-      Rscript plot1-day-ig-van-2015-pointsize1.0.alph0.4.R 001_ThuJan1\n\n")
+      Rscript plot1-day-ig-van-2015-pointsize1.0.alph0.4.R 001_ThuJan1.csv\n\n")
  
   q(save="no")
 }
 
 print(args[1])
-data4 = read.csv(paste(file=args[1],".csv", sep=""), stringsAsFactors=F)
+data4 = read.csv(file=args[1], stringsAsFactors=F)
 # following theme is from:
 # http://stackoverflow.com/questions/6736378/how-do-i-change-the-background-color-of-a-plot-made-with-ggplot2
 theme_map <- function (base_size = 12, base_family = "") {
@@ -54,4 +54,4 @@ theme_map <- function (base_size = 12, base_family = "") {
 
 (p <- qplot(long, lat, geom = "point", data = data4, color=I(data4$color), xlim=c(-123.27, -123.005), ylim=c(49.21, 49.324), size=I(1.0), alpha=I(0.5)) + theme_map())
 
-ggsave(paste(file=args[1],".png", sep=""),p, width = 26.666666667, height = 26.666666667, dpi = 72, limitsize = FALSE) # 26.6666667 = 1920/72dpi
+ggsave(gsub("csv", "png", basename(args[1])), p, width = 26.666666667, height = 26.666666667, dpi = 72, limitsize = FALSE) # 26.6666667 = 1920/72dpi
