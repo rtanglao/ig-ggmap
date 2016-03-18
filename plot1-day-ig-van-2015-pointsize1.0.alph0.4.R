@@ -54,4 +54,4 @@ theme_map <- function (base_size = 12, base_family = "") {
 
 (p <- qplot(long, lat, geom = "point", data = data4, color=I(data4$color), xlim=c(-123.27, -123.005), ylim=c(49.21, 49.324), size=I(1.0), alpha=I(0.5)) + theme_map())
 
-ggsave(paste(file=args[1],".png", sep=""),p, width = 26.666666667, height = 26.666666667, dpi = 72, limitsize = FALSE)
+ggsave(paste(file=args[1],".png", sep=""),p, width = 26.666666667, height = 26.666666667, dpi = 72, limitsize = FALSE) # 26.6666667 = 1920/72dpi
