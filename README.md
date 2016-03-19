@@ -80,6 +80,22 @@ color=I(data6$color), xlim=c(-123.27, -123.005),
 ylim=c(49.21, 49.324), size=I(1.0), alpha=I(0.4))+
 facet_wrap(~date) + theme_minimal())
 ```
-# 16 March 2016
+# 16 March 2016 - R script with command line parameters
 
 1. next up write an R script to generate a map from command line parameters for the date and then create a PNG of that file
+# 18 March 2016 R script with command line parameters to generate 365 maps
+
+1. create 365 CSV files
+ 
+ ```sh
+ mkdir CSV_FILES_FOR_GGMAP_2015
+ cd CSV_FILES_FOR_GGMAP_2015
+ ../create365-CSV-files-ig-vancouver-2015-top-colour.rb
+ ```
+2. Create 365 maps 
+ 
+ ```sh
+ mkdir 1920PXx1920PX_MAPS_FOR_GGMAP2015 ; cd !$
+ ls -1 ../CSV_FILES_FOR_GGMAP_2015/*.csv | xargs -n 1 Rscript
+ ../plot1-day-ig-van-2015-pointsize1.0.alph0.4.R
+ ```
