@@ -106,7 +106,10 @@ facet_wrap(~date) + theme_minimal())
  ```sh
  ls -1 *.png > 365pngs.txt
  ```
- 2. make montage:
+2. make montage:
 ```sh
-gm montage -verbose -adjoin -tile 7x53 +frame +shadow +label -adjoin -geometry '1920x1920+0+0<' null: null:null: @365pngs.txt null: null: null: 19march2016-53x7-365days-ggmap-vancouver-instagram-2015-montage.png
+gm montage -verbose -adjoin -tile 7x53 +frame +shadow \
++label -adjoin -geometry '1920x1920+0+0<' null: \
+null:null: @365pngs.txt null: null: null: \
+19march2016-53x7-365days-ggmap-vancouver-instagram-2015-montage.png
 ```
