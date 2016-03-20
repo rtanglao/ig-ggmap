@@ -127,7 +127,7 @@ facet_wrap(~date) + theme_minimal())
  ls -1 ../*_*.png > 365pngs.txt
  ```
  
- 1. make the jpegs and the timelapse
+1. make the jpegs and the timelapse
   ```sh
   mogrify -path . -format jpeg @365pngs.txt 
   ```
