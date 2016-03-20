@@ -110,6 +110,6 @@ facet_wrap(~date) + theme_minimal())
 ```sh
 gm montage -verbose -adjoin -tile 7x53 +frame +shadow \
 +label -adjoin -geometry '1920x1920+0+0<' null: \
-null:null: @365pngs.txt null: null: null: \
+null: null: @365pngs.txt null: null: null: \
 19march2016-53x7-365days-ggmap-vancouver-instagram-2015-montage.png
 ```
