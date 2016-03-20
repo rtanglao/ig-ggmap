@@ -99,7 +99,7 @@ facet_wrap(~date) + theme_minimal())
  ls -1 ../CSV_FILES_FOR_GGMAP_2015/*.csv | xargs -n 1 Rscript
  ../plot1-day-ig-van-2015-pointsize1.0.alph0.4.R
  ```
-#  19 March 2016 creat montage
+#  19 March 2016 create montage
 ```cd /Users/rtanglao/Dropbox/GIT/ig-ggmap/1920PXx1920PX_MAPS_FOR_GGMAP2015```
 
 1. create png file list
