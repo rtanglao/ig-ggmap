@@ -99,3 +99,14 @@ facet_wrap(~date) + theme_minimal())
  ls -1 ../CSV_FILES_FOR_GGMAP_2015/*.csv | xargs -n 1 Rscript
  ../plot1-day-ig-van-2015-pointsize1.0.alph0.4.R
  ```
+#  19 March 2016 creat montage
+```cd /Users/rtanglao/Dropbox/GIT/ig-ggmap/1920PXx1920PX_MAPS_FOR_GGMAP2015```
+
+1. create png file list
+ ```sh
+ ls -1 *.png > 365pngs.txt
+ ```
+ 2. make montage:
+```sh
+gm montage -verbose -adjoin -tile 7x53 +frame +shadow +label -adjoin -geometry '1920x1920+0+0<' null: null:null: @365pngs.txt null: null: null: 19march2016-53x7-365days-ggmap-vancouver-instagram-2015-montage.png
+```
