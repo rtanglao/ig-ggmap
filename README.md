@@ -55,34 +55,36 @@ make chromeless map following this:
 1. generate facets aka small multiples
  
  ```R
-f="~rtanglao/Dropbox/GIT/rtgram/13March2016-abbreviated-instagram-vancouver-top-colour-lat-long-date-2015.csv"
-data6 = read.csv(file=f,stringsAsFactors=F)
-(p <- qplot(long, lat, geom = "point", data = data6,
+ f="~rtanglao/Dropbox/GIT/rtgram/13March2016-abbreviated-instagram-vancouver-top-colour-lat-long-date-2015.csv"
+ data6 = read.csv(file=f,stringsAsFactors=F)
+ (p <- qplot(long, lat, geom = "point", data = data6,
 color=I(data6$color), xlim=c(-123.27, -123.005),
-ylim=c(49.21, 49.324), size=I(1.0), alpha=I(0.4))+
+ ylim=c(49.21, 49.324), size=I(1.0), alpha=I(0.4))+
 facet_wrap(~date) + theme_minimal())
-```
+ ```
 
 # 14 March 2016 - small multiples
 
 1. get dataset
 
-    ```bash
-    ./writeHexTopColourLatLonByDate.rb > 13March2016-instagram-vancouver-top-colour-lat-long-date-2015.csv
-    ```
+ ```bash
+ ./writeHexTopColourLatLonByDate.rb > 13March2016-instagram-vancouver-top-colour-lat-long-date-2015.csv
+ ```
 1. generate facets aka small multiples
  
  ```R
-f="~rtanglao/Dropbox/GIT/rtgram/13March2016-instagram-vancouver-top-colour-lat-long-date-2015.csv"
-data6 = read.csv(file=f,stringsAsFactors=F)
-(p <- qplot(long, lat, geom = "point", data = data6,
+ f="~rtanglao/Dropbox/GIT/rtgram/13March2016-instagram-vancouver-top-colour-lat-long-date-2015.csv"
+ data6 = read.csv(file=f,stringsAsFactors=F)
+ (p <- qplot(long, lat, geom = "point", data = data6,
 color=I(data6$color), xlim=c(-123.27, -123.005),
 ylim=c(49.21, 49.324), size=I(1.0), alpha=I(0.4))+
 facet_wrap(~date) + theme_minimal())
-```
+ ```
+
 # 16 March 2016 - R script with command line parameters
 
 1. next up write an R script to generate a map from command line parameters for the date and then create a PNG of that file
+
 # 18 March 2016 R script with command line parameters to generate 365 maps
 
 1. create 365 CSV files
@@ -92,6 +94,7 @@ facet_wrap(~date) + theme_minimal())
  cd CSV_FILES_FOR_GGMAP_2015
  ../create365-CSV-files-ig-vancouver-2015-top-colour.rb
  ```
+ 
 2. Create 365 maps 
  
  ```sh
@@ -99,6 +102,7 @@ facet_wrap(~date) + theme_minimal())
  ls -1 ../CSV_FILES_FOR_GGMAP_2015/*.csv | xargs -n 1 Rscript
  ../plot1-day-ig-van-2015-pointsize1.0.alph0.4.R
  ```
+ 
 #  19 March 2016 create montage
 ```cd /Users/rtanglao/Dropbox/GIT/ig-ggmap/1920PXx1920PX_MAPS_FOR_GGMAP2015```
 
@@ -107,12 +111,12 @@ facet_wrap(~date) + theme_minimal())
  ls -1 *.png > 365pngs.txt
  ```
 2. make montage:
-```sh
-gm montage -verbose -adjoin -tile 7x53 +frame +shadow \
-+label -adjoin -geometry '1920x1920+0+0<' null: \
-null: null: @365pngs.txt null: null: null: \
-19march2016-53x7-365days-ggmap-vancouver-instagram-2015-montage.png
-```
+ ```sh
+ gm montage -verbose -adjoin -tile 7x53 +frame +shadow \
+ +label -adjoin -geometry '1920x1920+0+0<' null: \
+ null: null: @365pngs.txt null: null: null: \
+ 19march2016-53x7-365days-ggmap-vancouver-instagram-2015-montage.png
+ ```
 
 # 20 March 2016 create time lapse
 
