@@ -133,3 +133,13 @@ facet_wrap(~date) + theme_minimal())
   ```
   
 Make the timelapse using timelapse assembler on mac OR imagemagick or graphicsmagick convert
+
+# 20 March 2015 make annotated jpegs
+"%t" is the filename escape for imagemagick
+
+```cd /Users/rtanglao/Dropbox/GIT/ig-ggmap/1920x1080-GGMAPS
+mkdir ANNOTATED_WITH_DATE_JPEGS ; cd !$
+ls -1 ../*_*.png | xargs -n 1 mogrify -path . -format \
+jpg  -verbose -font Times-Bold -pointsize 32 \
+-fill white  -undercolor '#00000080' \
+-gravity southeast -annotate +0+5 %t``` 
