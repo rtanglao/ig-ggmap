@@ -39,9 +39,10 @@ ARGF.each do |line|
       :lon => lon
     }
   woeid_rsp = getFlickrResponse(base_url, url_params)
-  #pp woeid_rsp
+  PP::pp(woeid_rsp, $stderr)
   woe_name =  woeid_rsp["places"]["place"][0]["woe_name"]
 
   printf("%s,%s\n",  averagecolour_lat_lon_date, woe_name)
+  sleep(5)
   
 end
