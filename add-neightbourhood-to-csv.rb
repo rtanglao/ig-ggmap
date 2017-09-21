@@ -29,6 +29,9 @@ ARGF.each do |line|
   lat = fields[1]
   lon = fields[2]
 
+  #$stderr.printf("number of fields:%d\n", fields.length)
+  #exit
+
   base_url = "services/rest/"
   
   url_params = {:method => "flickr.places.findByLatLon",
@@ -40,9 +43,15 @@ ARGF.each do |line|
     }
   woeid_rsp = getFlickrResponse(base_url, url_params)
   PP::pp(woeid_rsp, $stderr)
-  woe_name =  woeid_rsp["places"]["place"][0]["woe_name"]
+  place = woeid_rsp["places"]["place"]
+  if place == []
+    $stderr.printf("place is nil, skipping\n")
+    next
+  end
+  
+  woe_name =  place[0]["woe_name"]
 
   printf("%s,%s\n",  averagecolour_lat_lon_date, woe_name)
-  sleep(5)
+  sleep(2)
   
 end
