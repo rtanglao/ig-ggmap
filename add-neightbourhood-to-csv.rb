@@ -52,6 +52,6 @@ ARGF.each do |line|
   woe_name =  place[0]["woe_name"]
 
   printf("%s,%s\n",  averagecolour_lat_lon_date, woe_name)
-  sleep(1)
+  sleep(0.5)
   
 end
