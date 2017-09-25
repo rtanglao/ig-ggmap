@@ -17,10 +17,10 @@ api_key = flickr_config['api_key']
 
 # pp api_key
 
-first = TRUE
+first = true
 ARGF.each do |line|
   if first
-    first = FALSE
+    first = false
     printf("colour,lat,long,date,neighbourhood\n")
     next
   end
@@ -28,9 +28,6 @@ ARGF.each do |line|
   fields = averagecolour_lat_lon_date.split(',')
   lat = fields[1]
   lon = fields[2]
-
-  #$stderr.printf("number of fields:%d\n", fields.length)
-  #exit
 
   base_url = "services/rest/"
   
