@@ -8,7 +8,7 @@ used [http://www.benjack.io/2016/01/02/el-capitan-biocomputing.html](http://www.
     brew tap homebrew/science
     brew install R
     brew tap caskroom/cask
-    brew cask install rstudio```
+    brew cask install rstudio
     
 #     10 March 2016 trying out ggmap
 ## Successful
@@ -134,7 +134,7 @@ facet_wrap(~date) + theme_minimal())
   
 Make the timelapse using timelapse assembler on mac OR imagemagick or graphicsmagick convert
 
-# 20 March 2015 make annotated jpegs
+# 20 March 2016 make annotated jpegs
 "%t" is the filename (without the filetype) escape for imagemagick. note that "convert" wouldn't work easily so I switched to "mogrify" which requires "-path ." to write to the current directory.
 
 ```sh
