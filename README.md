@@ -148,7 +148,7 @@ jpg  -verbose -font Times-Bold -pointsize 32 \
 # 09October 2017
 * [Add neighbourhood using Flickr API](http://rolandtanglao.com/2017/10/09/p1-one-csv-file-neighbourhood-instagram-vancouver-average-colour-2015/) and [step 1 of cleaning the resulting data](http://rolandtanglao.com/2017/10/09/p2-step1-to-clean-up-ig-van2015-neighbourhoods-count/)
 # 10October2017
-## Let's try Gastown only
+## 10October2017-Let's try Gastown only
 
 ```R
 gastown_map <- get_map("Gastown, Vancouver",zoom=15,maptype="toner-lines",source="stamen")
@@ -162,7 +162,7 @@ ggmap(gastown_map) + geom_point(data = gastown_ig_van_2015,
   theme_void()
 ```
 
-## let's try labels
+## 10October2017-let's try labels
 
 ```R
 gastown_labels_map <- get_map("Gastown, Vancouver",zoom=15,maptype="toner-labels",source="stamen")
@@ -172,7 +172,7 @@ ggmap(gastown_labels_map) + geom_point(data = gastown_ig_van_2015,
   theme_void()
 ```
 
-## let's try watercolor
+## 10October2017-let's try watercolor
 
 ```R
 gastown_watercolor_map <- get_map("Gastown, Vancouver",zoom=15,maptype="watercolor",source="stamen")
@@ -182,7 +182,7 @@ ggmap(gastown_watercolor_map) + geom_point(data = gastown_ig_van_2015,
   theme_void()
 ```
 
-## Let's try Kensington-Cedar Cottage
+## 10October2017-Let's try Kensington-Cedar Cottage
 
 ```R
 kcc_watercolor_map <- get_map("Kensington-Cedar Cottage, Vancouver",zoom=15,maptype="watercolor",source="stamen")
@@ -195,7 +195,7 @@ ggmap(kcc_watercolor_map) + geom_point(data = kcc_ig_van_2015,
   theme_void()
 ```
 
-## Let's try Commercial Drive
+## 10October2017-Let's try Commercial Drive
 
 ```R
 commercial_watercolor_map <- get_map("Commercial, Vancouver",zoom=15,maptype="watercolor",source="stamen")
@@ -208,7 +208,7 @@ ggmap(commercial_watercolor_map) + geom_point(data = commercial_ig_van_2015,
   theme_void()
 ```
 
-## commercial chromeless
+## 10October2017-commercial chromeless
 
 ```R
 ggplot(data=commercial_ig_van_2015, aes(x=long, y = lat))+
@@ -217,7 +217,7 @@ size=I(6.0),alpha=I(0.4))+
 theme_void()
 ```
 
-## gastown chromeless
+## 10October2017-gastown chromeless
 
 ```R
 ggplot(data=gastown_ig_van_2015, aes(x=long, y = lat))+
