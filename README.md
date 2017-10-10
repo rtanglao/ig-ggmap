@@ -145,4 +145,5 @@ jpg  -verbose -font Times-Bold -pointsize 32 \
 -fill white  -undercolor '#00000080' \
 -gravity southeast -annotate +0+5 %t
 ``` 
-
+# 09October 2017
+* [Add neighbourhood using Flickr API](http://rolandtanglao.com/2017/10/09/p1-one-csv-file-neighbourhood-instagram-vancouver-average-colour-2015/) and [step 1 of cleaning the resulting data](http://rolandtanglao.com/2017/10/09/p2-step1-to-clean-up-ig-van2015-neighbourhoods-count/)
