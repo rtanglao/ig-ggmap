@@ -148,6 +148,73 @@ jpg  -verbose -font Times-Bold -pointsize 32 \
 # 09October 2017
 * [Add neighbourhood using Flickr API](http://rolandtanglao.com/2017/10/09/p1-one-csv-file-neighbourhood-instagram-vancouver-average-colour-2015/) and [step 1 of cleaning the resulting data](http://rolandtanglao.com/2017/10/09/p2-step1-to-clean-up-ig-van2015-neighbourhoods-count/)
 # 10October2017
+## 10October2017-step 2 remove Maywood, Burnaby, etc.
+
+```R
+filter_step2_ig_van_neighbourhood_2015  <-
+  ig_van_neighbourhood_2015 %>% 
+  filter(neighbourhood != "Maywood") %>% 
+  filter(neighbourhood != "Whistler") %>%
+  filter(neighbourhood != "Burnaby") %>%
+  filter(neighbourhood != "Vancouver") %>%
+  filter(neighbourhood != "North Vancouver") %>%
+  filter(neighbourhood != "Surrey" ) %>%
+  filter(neighbourhood != "Norgate" ) %>%
+  filter(neighbourhood != "Deep Cove" ) %>%
+  filter(neighbourhood != "Sea Island" ) %>%
+  filter(neighbourhood != "Stride Hill" ) %>%
+  filter(neighbourhood != "West Vancouver" ) %>%
+  filter(neighbourhood != "Keith-Lynn" ) %>%
+  filter(neighbourhood != "Laurentian Belaire" ) %>%
+  filter(neighbourhood != "Greater Vancouver" ) %>%
+  filter(neighbourhood != "Cleveland Park" ) %>%
+  filter(neighbourhood != "Capilano" ) %>%
+  filter(neighbourhood != "Park Royal" ) %>%
+  filter(neighbourhood != "Ubc" ) %>%
+  filter(neighbourhood != "Squamish-Lillooet" ) %>%
+  filter(neighbourhood != "Horseshoe Bay" ) %>%
+  filter(neighbourhood != "Golden Village" )
+
+(p <- 
+    qmplot(
+      long, lat, geom = "point", data = filter_step2_ig_van_neighbourhood_2015,
+      color=I(filter_step2_ig_van_neighbourhood_2015$colour), xlim=c(-123.27, -123.005),
+            ylim=c(49.21, 49.324), size=I(1.0), alpha=I(0.4))+
+    facet_wrap(~neighbourhood) + theme_minimal())
+p
+
+qmplot(long, lat, geom = "point",
+       size=I(1.0), alpha=I(0.4),
+       data = filter_step2_ig_van_neighbourhood_2015, 
+       source = "google",
+       maptype = "hybrid", 
+       color = I(filter_step2_ig_van_neighbourhood_2015$colour)) + 
+  facet_wrap(~ neighbourhood)
+```
+
+## 10October2017-ggmap
+
+* next up try: https://medium.com/fastah-project/a-quick-start-to-maps-in-r-b9f221f44ff3
+* and:https://ourcodingclub.github.io/2016/12/11/maps_tutorial.html
+
+```R
+m <- get_map("Vancouver",zoom=12,maptype="terrain",source="google")
+n <- get_map("Vancouver",zoom=12,maptype="toner",source="stamen")
+
+ggmap(n) + geom_point(data = filter_step2_ig_van_neighbourhood_2015, 
+                      aes(long,lat,color=I(filter_step2_ig_van_neighbourhood_2015$colour)),
+                      size=2,alpha=0.7) +
+  facet_wrap(~ neighbourhood)+
+  theme_minimal()
+
+o <- get_map("Vancouver",zoom=12,maptype="toner-lines",source="stamen")
+ggmap(o) + geom_point(data = filter_step2_ig_van_neighbourhood_2015, 
+                      aes(long,lat,color=I(filter_step2_ig_van_neighbourhood_2015$colour)),
+                      size=I(1.0),alpha=I(0.4)) +
+  facet_wrap(~ neighbourhood)+
+    theme_void()
+```
+
 ## 10October2017-Let's try Gastown only
 
 ```R
@@ -225,3 +292,4 @@ geom_point(aes(long,lat,color=I(gastown_ig_van_2015$colour)),
 size=I(6.0),alpha=I(0.4))+
 theme_void()
 ```
+
