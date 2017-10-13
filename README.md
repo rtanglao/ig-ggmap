@@ -307,6 +307,10 @@ write.csv(filter_step2_ig_van_neighbourhood_2015,
 * 2\. from the command line, get the neighbourhoods and create a map for each:
 
 ```bash
+tail -n +2 filter_step2_ig_van_neighbourhood_2015.csv |\
+cut -d "," -f5 | sort | uniq -c | \
+sort -rn > reverse_sorted_vancouver_neighbourhoods.txt
+
 Rscript ../../create-overplotted-Vancouver-neighbourhood-map.R "Kensington-Cedar Cottage"
 Rscript ../../create-overplotted-Vancouver-neighbourhood-map.R "Gastown"
 ```
