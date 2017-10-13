@@ -30,7 +30,7 @@ used [http://www.benjack.io/2016/01/02/el-capitan-biocomputing.html](http://www.
 make chromeless map following this:
 
 * [http://www.milanor.net/blog/maps-in-r-introduction-drawing-the-map-of-europe/](http://www.milanor.net/blog/maps-in-r-introduction-drawing-the-map-of-europe/)
-* [http://www.milanor.net/blog/maps-in-r-plotting-data-points-on-a-map/](http://www.milanor.net/blog/maps-in-r-plotting-data-points-on-a-map/)
+* [http://www.milanor.net/blog/maps-in-r-plotting-data-points-on-a-map/](http://www.milanor.net/blog/maps-in-r-plotting-data-points-on-a-map/)˘
 
 # 12 March 2016 - chromeless maps!
 1. read the data:
@@ -310,7 +310,9 @@ write.csv(filter_step2_ig_van_neighbourhood_2015,
 tail -n +2 filter_step2_ig_van_neighbourhood_2015.csv |\
 cut -d "," -f5 | sort | uniq -c | \
 sort -rn > reverse_sorted_vancouver_neighbourhoods.txt
-
+cp reverse_sorted_vancouver_neighbourhoods.txt \
+only_real_vancouver-reverse-sortedwithout-counts.txt
+vi !$ # remove non real vancouver neighbourhoods and the counts
 Rscript ../../create-overplotted-Vancouver-neighbourhood-map.R "Kensington-Cedar Cottage"
 Rscript ../../create-overplotted-Vancouver-neighbourhood-map.R "Gastown"
 ```
