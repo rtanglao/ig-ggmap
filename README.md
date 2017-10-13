@@ -292,4 +292,11 @@ geom_point(aes(long,lat,color=I(gastown_ig_van_2015$colour)),
 size=I(6.0),alpha=I(0.4))+
 theme_void()
 ```
+# 11October2017
+## 11October2017-write-filter_step2_ig_van_neighbourhood_2015.csv
 
+```R
+write.csv(filter_step2_ig_van_neighbourhood_2015.csv, 
+          file = "filter_step2_ig_van_neighbourhood_2015.csv",
+          row.names=FALSE)
+```
