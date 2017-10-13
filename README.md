@@ -303,3 +303,10 @@ write.csv(filter_step2_ig_van_neighbourhood_2015,
           file = "filter_step2_ig_van_neighbourhood_2015.csv",
           row.names=FALSE)
 ```
+
+* 2\. from the command line, get the neighbourhoods and create a map for each:
+
+```bash
+Rscript ../../create-overplotted-Vancouver-neighbourhood-map.R "Kensington-Cedar Cottage"
+Rscript ../../create-overplotted-Vancouver-neighbourhood-map.R "Gastown"
+```
