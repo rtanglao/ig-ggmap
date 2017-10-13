@@ -313,6 +313,7 @@ sort -rn > reverse_sorted_vancouver_neighbourhoods.txt
 cp reverse_sorted_vancouver_neighbourhoods.txt \
 only_real_vancouver-reverse-sortedwithout-counts.txt
 vi !$ # remove non real vancouver neighbourhoods and the counts
-Rscript ../../create-overplotted-Vancouver-neighbourhood-map.R "Kensington-Cedar Cottage"
-Rscript ../../create-overplotted-Vancouver-neighbourhood-map.R "Gastown"
+cat only_real_vancouver-reverse-sortedwithout-counts.txt | \
+parallel -N 1 \
+Rscript ../../create-overplotted-Vancouver-neighbourhood-map.R {} 
 ```
