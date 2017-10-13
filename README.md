@@ -295,8 +295,11 @@ theme_void()
 # 12October2017
 ## 12October2017-write-filter_step2_ig_van_neighbourhood_2015.csv
 
+* 1\. In R Studio:
+
 ```R
-write.csv(filter_step2_ig_van_neighbourhood_2015.csv, 
+setwd("/Users/rtanglao/Dropbox/GIT/ig-ggmap/WITH_NEIGHBOURHOOD_CSV_FILES_FOR_GGMAP_2015/CHROMELESS_MAPS_FOR_EACH_NEIGHBOURHOOD")
+write.csv(filter_step2_ig_van_neighbourhood_2015, 
           file = "filter_step2_ig_van_neighbourhood_2015.csv",
           row.names=FALSE)
 ```
